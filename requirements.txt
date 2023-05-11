@@ -1,0 +1,4 @@
+pytest
+allure-pytest
+selene>=2.0.b17
+selenium==4.5.0
