@@ -89,18 +89,18 @@ def test_should_registered_user_with():
     )
 
 
-def test_form():
-    test_open(url)
-    test_fill_user_initials()
-    test_fill_user_email()
-    test_chose_user_gender()
-    test_fill_user_phone()
-    test_fill_user_date_born()
-    test_fill_user_subject()
-    test_chose_user_hobbies()
-    test_add_img()
-    test_fill_current_address()
-    test_type_state()
-    test_submit_form()
-    test_should_registered_user_with()
+# def test_form():
+#     test_open(url)
+#     test_fill_user_initials()
+#     test_fill_user_email()
+#     test_chose_user_gender()
+#     test_fill_user_phone()
+#     test_fill_user_date_born()
+#     test_fill_user_subject()
+#     test_chose_user_hobbies()
+#     test_add_img()
+#     test_fill_current_address()
+#     test_type_state()
+#     test_submit_form()
+#     test_should_registered_user_with()
 

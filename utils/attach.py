@@ -24,7 +24,3 @@ def add_video(browser):
            + video_url \
            + "' type='video/mp4'></video></body></html>"
     allure.attach(html, 'video_' + browser.driver.session_id, AttachmentType.HTML, '.html')
-
-
-def resources_path(file_name):
-    return os.getcwd() + f'/tests/resources/{file_name}'
