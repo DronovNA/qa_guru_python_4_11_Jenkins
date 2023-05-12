@@ -49,8 +49,8 @@ def setup_browser(request):
 
     yield browser
 
-    Attachment.add_html(browser)
-    Attachment.add_screenshot(browser)
-    Attachment.add_logs(browser)
-    Attachment.add_video(browser)
-    browser.quit()
+    # Attachment.add_html(browser)
+    # Attachment.add_screenshot(browser)
+    # Attachment.add_logs(browser)
+    # Attachment.add_video(browser)
+    # browser.quit()

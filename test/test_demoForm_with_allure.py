@@ -14,7 +14,7 @@ url = "https://demoqa.com/automation-practice-form"
 @allure.link(url, name='Testing')
 
 @allure.step ('Открыть главную страницу')
-def test_open(hold_browser):
+def test_open():
     browser.open(url)
 
 @allure.step('Ввод имени и фамилии')
