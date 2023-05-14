@@ -11,6 +11,9 @@ def test_successful(setup_browser):
 
     with allure.step("Открыть главную страницу"):
         browser.open(base_url)
+        browser.all('[class="ob.widget.items.container"]').perform(command.js.remove)
+        browser.all('#RightSide_Advertisement').perform(command.js.remove)
+        browser.all('#adplus-anchor').perform(command.js.remove)
 
     with allure.step("Ввод имени и фамилии"):
         browser.element("#firstName").should(be.blank).type("Test")
@@ -26,7 +29,7 @@ def test_successful(setup_browser):
         browser.element("#userNumber").should(be.blank).type("89997589856")
 
     with allure.step("Выбор даты рождения"):
-        browser.execute_script("window.scrollBy(0, 500)")
+        browser.element("#dateOfBirthInput").perform(command.js.scroll_into_view)
         browser.element("#dateOfBirthInput").should(be.clickable).click()
         browser.element('[value="1998"]').should(be.clickable).click()
         browser.element(
@@ -44,7 +47,7 @@ def test_successful(setup_browser):
         )
 
     with allure.step("Добавление фото"):
-        browser.element("#uploadPicture").send_keys(os.getcwd() + "\example.png")
+        browser.element("#uploadPicture").send_keys(os.getcwd() + "/test/example.png")
 
     with allure.step("Ввод адреса проживания"):
         browser.element("#currentAddress").should(be.blank).type("Test test test")
@@ -77,7 +80,6 @@ def test_successful(setup_browser):
                 "NCR Delhi"
             )
         )
-
 
 # def test_form():
 #     test_open(base_url)
