@@ -2,11 +2,10 @@ import os
 
 from selene import browser, be, command, have
 import allure
-from allure_commons.types import Severity
 
 
 @allure.title("Successful fill form")
-def test_successful():
+def test_successful(setup_browser):
     base_url = "https://demoqa.com/automation-practice-form"
 
     with allure.step("Открыть главную страницу"):
